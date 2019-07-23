@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>技大祭出欠アンケートをシフトに反映する</h2>
+<hr>
+<br>
+<h3>注意事項</h3>
+<ul>
+    <li>アンケートでの名前は正式名でないと登録されません．変な名前の人はあらかじめ修正してから実行してください．</li>
+    <li>同じ名前で複数の回答がある場合，一番下の回答が反映されます．</li>
+    <li>このツールでは結合されているセル(×がまとまって付いているセル)を解除することはできません．つまり×の時間帯を少しズラいたい場合などは，事前にセル結合を解除してから実行してください．</li>
+    <li>スプレッドシートの復元機能を使うと，実行前の状態に戻れるので便利です．よろしくない実行結果だった場合，復元してなんとかなります．</li>
+</ul>
+<br>
+
+<form action="/" method="post">
+    パスワード: <input type="password" name="password" size="10" maxlength="20">
+    <button type="submit" value="submit">実行</button>
+</form>
+<br>
+{% if message %}
+    {{ message }}
+{% endif %}
+<br>
+<br>
+{% if messages %}
+    <div style="color: red;">
+        {{ messages|textbr }}
+    </div>
+{% endif %}
+<br>
+{% if error %}
+    {{ error }}
+{% endif %}
+
+{% endblock %}

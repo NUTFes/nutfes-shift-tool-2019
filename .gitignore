@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__
+.python-version
+.vscode
+.credentials
+client_secret.json
+config.py
+flags.pkl
