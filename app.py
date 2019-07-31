@@ -16,8 +16,9 @@ def form():
             try:
                 messages = register_absences()
                 message = "実行しました！"
-            except ValueError as error:
+            except ValueError as e:
                 message = '失敗しました.'
+                error = str(e)
         elif not value:
             message = 'パスワードを入力してください.'
         elif value != PASSWORD:
