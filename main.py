@@ -134,7 +134,7 @@ def register_absences():
         error_request_index = int(result.group(1))
         error_request = all_merge_request[error_request_index]
         sheet_id = error_request['mergeCells']['range']['sheetId']
-        sheet_name = [k for k, v in SHEETNAME2ID.items() if v == sheet_id][0]
+        sheet_name = [k for k, v in SHIFT_SHEETNAME2SHEETID.items() if v == sheet_id][0]
         start_column = error_request['mergeCells']['range']['startColumnIndex']
         error_column_name = [k for k, v in NAME2COLUMN.items() if v[0] == start_column][0]
         raise ValueError("セルの結合に失敗しました. 以前のセル結合が残っている場合は解除してから実行してください. シート名: '{}', 該当指名: '{}'".format(
