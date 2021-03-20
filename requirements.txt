@@ -11,7 +11,7 @@ gunicorn==19.9.0
 httplib2==0.11.3
 idna==2.7
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.11.3
 MarkupSafe==1.0
 mojimoji==0.0.9
 numpy==1.14.5
